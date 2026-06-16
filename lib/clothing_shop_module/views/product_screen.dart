@@ -124,7 +124,7 @@ class _ClothScreenState extends State<ClothScreen> {
 
   Widget _buildSkeleton(List<ProductModel>? items) {
     if (items == null || items.isEmpty) {
-      return Icon(Icons.list);
+      return Center(child: CircularProgressIndicator());
     }
     bool isLandscape =
         MediaQuery.of(context).orientation == Orientation.landscape;
