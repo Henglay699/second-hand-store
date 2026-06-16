@@ -193,7 +193,10 @@ class _ClothSearchScreenState extends State<ClothSearchScreen> {
             borderRadius: BorderRadius.circular(16),
             onTap: () {
               // This pushes the detail view on top of the tab bar screen context cleanly
-              Navigator.of(context).pushNamed('detail', arguments: item);
+              Navigator.of(
+                context,
+                rootNavigator: true,
+              ).pushNamed('detail', arguments: item);
             },
             child: Padding(
               padding: const EdgeInsets.all(12.0),
