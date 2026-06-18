@@ -253,8 +253,8 @@ class _ClothScreenState extends State<ClothScreen> {
                         borderRadius: BorderRadius.circular(8),
                         child: CachedNetworkImage(
                           imageUrl: item.image,
-                          width: double.maxFinite,
-                          height: double.maxFinite,
+                          // width: double.maxFinite,
+                          // height: double.maxFinite,
                           fit: BoxFit.scaleDown,
                           placeholder: (context, url) =>
                               Container(color: Colors.grey[300]),
@@ -319,9 +319,9 @@ class _ClothScreenState extends State<ClothScreen> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
+                    padding: const EdgeInsets.all(8),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(15),
                       child: Image.network(
                         item.image,
                         width: double.maxFinite,

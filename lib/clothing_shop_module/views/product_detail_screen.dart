@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clothing_shop/clothing_shop_module/models/product_model.dart';
+import 'package:clothing_shop/clothing_shop_module/states_logics/theme_logic.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ClothDetailScreen extends StatelessWidget {
   const ClothDetailScreen({super.key});
@@ -11,7 +13,7 @@ class ClothDetailScreen extends StatelessWidget {
     final item = ModalRoute.of(context)!.settings.arguments as ProductModel;
 
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final isDark = context.watch<ThemeLogic>().isDark;
 
     return Scaffold(
       backgroundColor: theme.colorScheme.background,

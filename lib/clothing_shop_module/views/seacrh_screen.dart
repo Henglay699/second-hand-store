@@ -151,7 +151,6 @@ class _ClothSearchScreenState extends State<ClothSearchScreen> {
           ),
         ),
 
-        // --- RESULTS TITLE ---
         if (_searchQuery.isNotEmpty)
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4),
@@ -166,8 +165,6 @@ class _ClothSearchScreenState extends State<ClothSearchScreen> {
               ),
             ),
           ),
-
-        // --- RESULTS LIST ---
         Expanded(
           child: _filteredProducts.isEmpty
               ? _buildEmptyState()
